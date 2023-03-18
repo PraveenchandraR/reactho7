@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+
+
 import './App.css';
+import { Provider } from 'react-redux';
+import store from './Ho7/Redux/Store';
+import RouterComponent from './Ho7/Components/RouterCompo';
+// import UsingRef from './day3/UsingRef';
+// import UseEffectCleanUp from './day3/Reducer';
+// import RouterCompo from './Ho7/RouterCompo';
+
+// import {  Routes, Route, BrowserRouter } from "react-router-dom";
+// import Home from "./Components/Home";
+// import Error from './Components/Error';
+// import Student from './Components/student';
+// import Contact from './Components/contact';
+// import Function from './Components/Function';
+// import { useState } from 'react';
+// import State from './day3/State';
+// import Effect from './day3/Effect';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+    <div>
+      
+       <RouterComponent />
+    
+      </div>
+        </Provider>
+  // <UseEffectCleanUp />
+  // <UsingRef />
+      
   );
 }
 
